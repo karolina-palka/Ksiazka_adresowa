@@ -1,3 +1,5 @@
+#ifndef UZYTKOWNIK_H_INCLUDED
+#define UZYTKOWNIK_H_INCLUDED
 #include <iostream>
 
 using namespace std;
@@ -15,3 +17,4 @@ public:
     string pobierzLogin();
     string pobierzHaslo();
 };
+#endif // UZYTKOWNIK_H_INCLUDED
