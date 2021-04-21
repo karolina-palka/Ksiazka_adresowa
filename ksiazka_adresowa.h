@@ -16,5 +16,7 @@ public:
     uzytkownikMenedzer.wczytajUzytkownikowZPliku();};
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    int logowanieUzytkownika();
+//    void zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, int idZalogowanegoUzytkownika);
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED
