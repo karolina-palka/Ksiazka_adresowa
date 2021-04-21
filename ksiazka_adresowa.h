@@ -11,7 +11,9 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
 
 public:
-    KsiazkaAdresowa();
+    const string nazwaPliku;
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami){
+    uzytkownikMenedzer.wczytajUzytkownikowZPliku();};
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };

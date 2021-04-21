@@ -2,13 +2,14 @@
 #include "PlikZUzytkownikami.h"
 
 //using namespace std;
-PlikZUzytkownikami:: PlikZUzytkownikami()
-{
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-}
+//PlikZUzytkownikami:: PlikZUzytkownikami():nazwaPlikuZUzytkownikami ("Uzytkownicy.txt")
+//{
+
+//}
 
 bool PlikZUzytkownikami:: czyPlikJestPusty()
 {
+    fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -18,7 +19,7 @@ bool PlikZUzytkownikami:: czyPlikJestPusty()
 
 void PlikZUzytkownikami:: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
-//    fstream plikTekstowy;
+    fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
