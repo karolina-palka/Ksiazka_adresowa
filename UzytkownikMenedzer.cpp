@@ -109,7 +109,7 @@ int UzytkownikMenedzer:: logowanieUzytkownika()
     system("pause");
     return 0;
 }
-/*void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
+void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
 {
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
@@ -125,4 +125,4 @@ int UzytkownikMenedzer:: logowanieUzytkownika()
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
-}*/
+}

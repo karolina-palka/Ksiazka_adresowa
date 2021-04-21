@@ -103,7 +103,7 @@ Uzytkownik PlikZUzytkownikami:: pobierzDaneUzytkownika(string daneJednegoUzytkow
     }
     return uzytkownik;
 }
-/*void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy)
+void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy)
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
@@ -135,4 +135,4 @@ Uzytkownik PlikZUzytkownikami:: pobierzDaneUzytkownika(string daneJednegoUzytkow
     }
 //    cout << "Zapisano" << endl
     plikTekstowy.close();
-}*/
+}
