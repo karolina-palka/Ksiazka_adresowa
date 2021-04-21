@@ -7,7 +7,6 @@ using namespace std;
 void KsiazkaAdresowa:: rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
-
 }
 
 void KsiazkaAdresowa:: wypiszWszystkichUzytkownikow()
@@ -16,5 +15,9 @@ void KsiazkaAdresowa:: wypiszWszystkichUzytkownikow()
 }
 int KsiazkaAdresowa::logowanieUzytkownika()
 {
-    uzytkownikMenedzer.logowanieUzytkownika();
+   idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
 }
+//void KsiazkaAdresowa:: zmianaHaslaZalogowanegoUzytkownika()
+//{
+//    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+//}

@@ -127,10 +127,12 @@ Uzytkownik PlikZUzytkownikami:: pobierzDaneUzytkownika(string daneJednegoUzytkow
             }
             liniaZDanymiUzytkownika = "";
         }
+         cout << "Zapisano" << endl;
     }
     else
     {
         cout << "Nie mozna otworzyc pliku " << nazwaPlikuZUzytkownikami << endl;
     }
+//    cout << "Zapisano" << endl
     plikTekstowy.close();
 }*/

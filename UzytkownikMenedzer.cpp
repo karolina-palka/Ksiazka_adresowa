@@ -109,7 +109,7 @@ int UzytkownikMenedzer:: logowanieUzytkownika()
     system("pause");
     return 0;
 }
-/*void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika( int idZalogowanegoUzytkownika)
+/*void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
 {
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
@@ -119,10 +119,10 @@ int UzytkownikMenedzer:: logowanieUzytkownika()
     {
         if (itr -> pobierzId() == idZalogowanegoUzytkownika)
         {
-            itr -> pobierzHaslo() = noweHaslo;
+            itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
         }
     }
-    zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }*/
