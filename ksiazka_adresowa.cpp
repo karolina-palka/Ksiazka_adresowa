@@ -17,7 +17,7 @@ int KsiazkaAdresowa::logowanieUzytkownika()
 {
    idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
 }
-//void KsiazkaAdresowa:: zmianaHaslaZalogowanegoUzytkownika()
-//{
-//    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
-//}
+void KsiazkaAdresowa:: zmianaHaslaZalogowanegoUzytkownika()
+{
+    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+}
