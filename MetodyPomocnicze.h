@@ -6,7 +6,6 @@
 #include <fstream>
 #include <sstream>
 
-//#include "MetodyPomocnicze.h"
 using namespace std;
 
 class MetodyPomocnicze
@@ -14,5 +13,7 @@ class MetodyPomocnicze
 public:
     static string wczytajLinie();
     static string konwerjsaIntNaString(int liczba);
+    static string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    static int konwersjaStringNaInt(string liczba);
 };
 #endif
