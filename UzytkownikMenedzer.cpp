@@ -9,25 +9,18 @@ Uzytkownik UzytkownikMenedzer:: podajDaneNowegoUzytkownika()
     Uzytkownik uzytkownik;
     string haslo, login;
 
-//    uzytkownik.id = pobierzIdNowegoUzytkownika();
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     do
     {
         cout << "Podaj login: ";
-//        login = wczytajLinie();
-//        uzytkownik.ustawLogin(login);
+
         uzytkownik.ustawLogin(MetodyPomocnicze::wczytajLinie());
-//        cin >> login;
-//        uzytkownik.ustawLogin(login);
+
     } while (czyIstniejeLogin( uzytkownik.pobierzLogin()) == true);
 
     cout << "Podaj haslo: ";
-//    cin >> haslo;
-//    haslo = wczytajLinie();
-//    uzytkownik.ustawHaslo(haslo);
     uzytkownik.ustawHaslo(MetodyPomocnicze::wczytajLinie());
-//    uzytkownik.ustawHaslo(haslo);
 
     return uzytkownik;
 }
@@ -127,3 +120,19 @@ void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoU
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
+/*char UzytkownikMenedzer:: wybierzOpcjeZMenuGlownego()
+{
+    char wybor;
+
+    system("cls");
+    cout << "    >>> MENU  GLOWNE <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Rejestracja" << endl;
+    cout << "2. Logowanie" << endl;
+    cout << "9. Koniec programu" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    wybor = MetodyPomocnicze::wczytajZnak();
+
+    return wybor;
+}*/

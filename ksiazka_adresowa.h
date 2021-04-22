@@ -12,20 +12,27 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer adresatMenedzer;
     int idZalogowanegoUzytkownika;
+    int idOstatniegoAdresata;
+//    char wybor;
+    void wyczyscPamiecWektoraZAdresatami();
 
 public:
-//    const string nazwaPliku;
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
     : uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
     adresatMenedzer(nazwaPlikuZAdresatami)
     {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
+//    char wybierzOpcjeZMenuGlownego();
+//    char wybierzOpcjeZMenuUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
+    void wylogujUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void wyswietlWszystkichAdresatow();
+    void dodajAdresata();
+    void wyjscieZProgramu();
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED
