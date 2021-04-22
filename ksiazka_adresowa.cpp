@@ -3,7 +3,6 @@
 using namespace std;
 
 
-
 void KsiazkaAdresowa:: rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
@@ -13,11 +12,15 @@ void KsiazkaAdresowa:: wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-int KsiazkaAdresowa::logowanieUzytkownika()
+void KsiazkaAdresowa::logowanieUzytkownika()
 {
    idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
 }
 void KsiazkaAdresowa:: zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+}
+int KsiazkaAdresowa:: wczytajAdresatowZalogowanegoUzytkownikaZPliku()
+{
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }
