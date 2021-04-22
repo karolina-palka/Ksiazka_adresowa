@@ -19,12 +19,13 @@ public:
     : uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
     adresatMenedzer(nazwaPlikuZAdresatami)
     {
-    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
-    int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    void wyswietlWszystkichAdresatow();
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED

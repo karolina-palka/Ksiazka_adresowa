@@ -20,7 +20,11 @@ void KsiazkaAdresowa:: zmianaHaslaZalogowanegoUzytkownika()
 {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 }
-int KsiazkaAdresowa:: wczytajAdresatowZalogowanegoUzytkownikaZPliku()
+void KsiazkaAdresowa:: wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}
+void KsiazkaAdresowa:: wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer.wyswietlWszystkichAdresatow();
 }

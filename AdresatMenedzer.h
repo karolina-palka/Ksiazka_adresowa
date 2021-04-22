@@ -5,17 +5,15 @@
 #include "PlikZAdresatami.h"
 class AdresatMenedzer
 {
-    int idZalogowanegoUzytkownika;
     int idOstatniegoAdresata;
-    int idUsunietegoAdresata;
+//    int idUsunietegoAdresata;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    void wyswietlDaneAdresata(Adresat adresat);
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami): plikZAdresatami(nazwaPlikuZAdresatami){};
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif // ADRESATMENEDZER_H_INCLUDED
