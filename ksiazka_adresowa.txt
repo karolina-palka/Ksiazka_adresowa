@@ -1,0 +1,24 @@
+2|8|Ala|Tutak|6363463|ryeye|yeye|
+4|8|Marek|Lizonczyk|6347347|n jtru|rurur|
+5|8|Wiola|Stoj|646347|nue|uurturtur|
+7|5|Michal|Nowak|646436|jf|jdf|
+8|5|Fryderyk|MArzec|64643|hfhdfj|jfj|
+9|8|Antoni|Nowak|7457457|jfutr|ut|
+10|5|Karolina|Palka|75754754|ututn|uytnuty|
+11|5|Ryszard|Wynkowski|757547|hffh|fjj|
+12|5|Monika|Walek|535325|ssysy|yyewy|
+14|8|Aleksander|Kwasniewski|647647|gfdsg sg s|gs |
+15|8|Ewa|Flakowska|6464363|fdshsd hs|dshs|
+16|5|Rafal|Sliwa|54743735|jgdj|gsh hs|
+17|5|Marta|Raczka|32421421|marta@op.pl|Odkrywkowa 9, 32-541 Trzebinia|
+18|5|Lidia|Rzeszutko|3532523|lidka@op.pl|os. Gaj 24/6|
+19|5|Monika|Lempart|42353252|monia@op.pl|Wroclaw 2/1 dda|
+20|5|Wirignia|Jajko|422523|wiwi@op.pl|54mtkm osog|
+21|5|Emil|Regis|523523|atata|twet t wq|
+22|8|Milva|Baring|5325325|12gsdgwek|kohrkto eojo Brokilon|
+23|1|Henry |Cavill|435235|henry@op.pl|53535 London|
+24|1|Freya|Allan|435151|freya@Op.pl|Great Britain 535/4 434|
+25|1|Adam|Palka|4242|adam@op.pl|ffwq kmof|
+26|7|Michal|Drozdz|53653523|2626|hfdh|
+27|1|Anya|Chalotra|32523523|anya@op.pl|dgaga |
+28|15|Marcin|Zamojski|121313|marcin@op.pl|dasff kga|
