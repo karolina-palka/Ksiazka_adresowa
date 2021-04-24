@@ -1,15 +1,19 @@
 #include "PlikZAdresatami.h"
 
-int PlikZAdresatami:: wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector<Adresat> &adresaci, int idZalogowanegoUzytkownika)
+int PlikZAdresatami:: pobierzIdOstatniegoAdresata()
+{
+    return idOstatniegoAdresata;
+}
+vector<Adresat> PlikZAdresatami:: wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
-//    vector<Adresat> adresaci;
-    int idOstatniegoAdresata = 0;
+    vector<Adresat> adresaci;
+ //zdefiniowanie na nowo poni¿szej zmiennej powoduje jej zas³oniêcie i jej wartoœæ nie jest przekazywana do sk³¹dowej klasy o tej samej nazwie!!!
+//    int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
-    cout << "Nazwa pliku z adresatami: " << nazwaPlikuZAdresatami << endl;
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -22,7 +26,6 @@ int PlikZAdresatami:: wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector<Adres
             }
         }
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
-//        cout << "Wczytano:" <<endl;
     }
     else
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
@@ -32,10 +35,8 @@ int PlikZAdresatami:: wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector<Adres
     if (daneOstaniegoAdresataWPliku != "")
     {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        return idOstatniegoAdresata;
     }
-    else
-        return 0;
+        return adresaci;
 }
 int PlikZAdresatami:: pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
@@ -99,7 +100,7 @@ void PlikZAdresatami:: dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
@@ -118,6 +119,7 @@ void PlikZAdresatami:: dopiszAdresataDoPliku(Adresat adresat)
     {
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
+    idOstatniegoAdresata++;
     plikTekstowy.close();
     system("pause");
 }

@@ -28,8 +28,6 @@ public:
     string pobierzNumerTelefonu();
     string pobierzEmail();
     string pobierzAdres();
-
 };
-
 
 #endif // ADRESAT_H_INCLUDED

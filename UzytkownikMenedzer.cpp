@@ -1,8 +1,10 @@
 #include <iostream>
 #include "UzytkownikMenedzer.h"
-//#include "uzytkownik.h"
 
-//using namespace std;
+int UzytkownikMenedzer:: pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
 
 Uzytkownik UzytkownikMenedzer:: podajDaneNowegoUzytkownika()
 {
@@ -10,7 +12,6 @@ Uzytkownik UzytkownikMenedzer:: podajDaneNowegoUzytkownika()
     string haslo, login;
 
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
-
     do
     {
         cout << "Podaj login: ";
@@ -63,12 +64,8 @@ void UzytkownikMenedzer:: wypiszWszystkichUzytkownikow()
             cout <<uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
-void UzytkownikMenedzer:: wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
 
-int UzytkownikMenedzer:: logowanieUzytkownika()
+void UzytkownikMenedzer:: logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -90,18 +87,26 @@ int UzytkownikMenedzer:: logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr -> pobierzId();
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    return;
+}
+bool UzytkownikMenedzer:: czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika >0)
+        return true;
+    else
+        return false;
 }
 void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
 {
@@ -120,7 +125,11 @@ void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoU
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-/*char UzytkownikMenedzer:: wybierzOpcjeZMenuGlownego()
+void UzytkownikMenedzer:: wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+char UzytkownikMenedzer:: wybierzOpcjeZMenuGlownego()
 {
     char wybor;
 
@@ -135,4 +144,4 @@ void UzytkownikMenedzer:: zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoU
     wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
-}*/
+}

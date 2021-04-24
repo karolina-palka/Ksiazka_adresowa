@@ -1,28 +1,28 @@
 #ifndef ADRESATMENEDZER_H_INCLUDED
 #define ADRESATMENEDZER_H_INCLUDED
-#include <algorithm>
 
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 class AdresatMenedzer
 {
-    int idOstatniegoAdresata;
-//    char wybor;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+
     void wyswietlDaneAdresata(Adresat adresat);
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
-    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+     Adresat podajDaneNowegoAdresata();
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami): plikZAdresatami(nazwaPlikuZAdresatami){};
-//    char wybierzOpcjeZMenuUzytkownika();
-    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    };
+    char wybierzOpcjeZMenuUzytkownika();
     void wyswietlWszystkichAdresatow();
-    int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
-    void wyczyscPamiecWektoraZAdresatami();
-
+    void dodajAdresata();
 };
 
 #endif // ADRESATMENEDZER_H_INCLUDED
