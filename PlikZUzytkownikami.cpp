@@ -2,9 +2,9 @@
 #include "PlikZUzytkownikami.h"
 
 
-bool PlikZUzytkownikami:: czyPlikJestPusty()
+bool PlikZUzytkownikami:: czyPlikJestPusty(fstream &plikTekstowy)
 {
-    fstream plikTekstowy;
+//    fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -16,19 +16,19 @@ void PlikZUzytkownikami:: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
-    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::app);
+    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
         liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
 
-        if (czyPlikJestPusty() == true)
+        if (czyPlikJestPusty(plikTekstowy) == true)
         {
-            plikTekstowy << liniaZDanymiUzytkownika;
+            plikTekstowy << liniaZDanymiUzytkownika ;
         }
         else
         {
-            plikTekstowy << endl << liniaZDanymiUzytkownika ;
+            plikTekstowy <<  endl << liniaZDanymiUzytkownika ;
         }
     }
     else
