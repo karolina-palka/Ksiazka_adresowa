@@ -41,7 +41,6 @@ public:
     void usunDaneAdresataZPliku(int idAdresata);
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata);
     void zaktualizujDaneWybranegoAdresata(Adresat adresat);
-
 };
 
 #endif // PLIKZADRESATAMI_H_INCLUDED
