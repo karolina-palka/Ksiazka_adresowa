@@ -21,8 +21,8 @@ class AdresatMenedzer
      void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-    : plikZAdresatami(nazwaPlikuZAdresatami,"temp.txt" ), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika, string nazwaPlikuTymczasowego="temp.txt")
+    : plikZAdresatami(nazwaPlikuZAdresatami, nazwaPlikuTymczasowego), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };

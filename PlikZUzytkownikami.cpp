@@ -2,21 +2,11 @@
 #include "PlikZUzytkownikami.h"
 
 
-bool PlikZUzytkownikami:: czyPlikJestPusty(fstream &plikTekstowy)
-{
-//    fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
 void PlikZUzytkownikami:: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
-    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::out | ios::app);
+    plikTekstowy.open(PlikTekstowy::pobierzNazwePliku().c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true)
     {
@@ -32,7 +22,7 @@ void PlikZUzytkownikami:: dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
         }
     }
     else
-        cout << "Nie udalo sie otworzyc pliku " << NAZWA_PLIKU_Z_UZYTKOWNIKAMI << " i zapisac w nim danych." << endl;
+        cout << "Nie udalo sie otworzyc pliku " << PlikTekstowy::pobierzNazwePliku() << " i zapisac w nim danych." << endl;
     plikTekstowy.close();
 }
 string PlikZUzytkownikami:: zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
@@ -52,7 +42,7 @@ vector<Uzytkownik> PlikZUzytkownikami:: wczytajUzytkownikowZPliku()
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
 
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::in);
+    plikTekstowy.open(PlikTekstowy::pobierzNazwePliku().c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -103,7 +93,7 @@ void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
 
-    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::out);
+    plikTekstowy.open(PlikTekstowy::pobierzNazwePliku().c_str(), ios::out);
 
     if (plikTekstowy.good() == true)
     {
@@ -112,12 +102,11 @@ void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik
             liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownicy[i]);
             plikTekstowy << liniaZDanymiUzytkownika << endl;
         }
-//        plikTekstowy << liniaZDanymiUzytkownika;
         liniaZDanymiUzytkownika = "";
     }
     else
     {
-        cout << "Nie mozna otworzyc pliku " << NAZWA_PLIKU_Z_UZYTKOWNIKAMI << endl;
+        cout << "Nie mozna otworzyc pliku " << PlikTekstowy::pobierzNazwePliku() << endl;
     }
     plikTekstowy.close();
 }
