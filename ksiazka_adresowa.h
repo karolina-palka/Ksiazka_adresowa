@@ -38,5 +38,6 @@ public:
     void wyjscieZProgramu();
     void usunAdresata();
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void edytujAdresata();
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED

@@ -71,3 +71,7 @@ void KsiazkaAdresowa:: podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata()
 {
     adresatMenedzer->podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 }
+void KsiazkaAdresowa:: edytujAdresata()
+{
+    adresatMenedzer->edytujAdresata();
+}
