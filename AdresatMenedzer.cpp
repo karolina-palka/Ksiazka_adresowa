@@ -90,14 +90,11 @@ Adresat AdresatMenedzer:: podajDaneNowegoAdresata()
 }
 int AdresatMenedzer:: usunAdresata()
 {
-//    int idUsuwanegoAdresata = 0;
     int numerLiniiUsuwanegoAdresata = 0;
-//    vector <Adresat> adresaci;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
     idUsuwanegoAdresata = podajIdWybranegoAdresata();
-//    cout << "idUsuwanegoAdresata: " << idUsuwanegoAdresata << endl;
     char znak;
     bool czyIstniejeAdresat = false;
 
