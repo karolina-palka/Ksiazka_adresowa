@@ -36,5 +36,7 @@ public:
     void dodajAdresata();
     bool czyUzytkownikJestZalogowany();
     void wyjscieZProgramu();
+    void usunAdresata();
+    void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED

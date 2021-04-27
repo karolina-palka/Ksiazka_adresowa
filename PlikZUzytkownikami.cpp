@@ -112,7 +112,7 @@ void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik
             liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownicy[i]);
             plikTekstowy << liniaZDanymiUzytkownika << endl;
         }
-        plikTekstowy << liniaZDanymiUzytkownika;
+//        plikTekstowy << liniaZDanymiUzytkownika;
         liniaZDanymiUzytkownika = "";
     }
     else

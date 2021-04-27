@@ -10,19 +10,24 @@ class AdresatMenedzer
 
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    int idUsuwanegoAdresata;
 
     void wyswietlDaneAdresata(Adresat adresat);
      Adresat podajDaneNowegoAdresata();
+     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+     int podajIdWybranegoAdresata();
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-    : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    : plikZAdresatami(nazwaPlikuZAdresatami,"temp.txt" ), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
     char wybierzOpcjeZMenuUzytkownika();
     void wyswietlWszystkichAdresatow();
     void dodajAdresata();
+    int usunAdresata();
+    void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 };
 
 #endif // ADRESATMENEDZER_H_INCLUDED

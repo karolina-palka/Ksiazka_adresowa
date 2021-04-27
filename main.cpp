@@ -26,6 +26,12 @@ int main()
                     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                     break;
                 }
+                case '5':
+                {
+                    ksiazkaAdresowa.usunAdresata();
+                    ksiazkaAdresowa.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+                    break;
+                }
                 case '7':
                 {
                     ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
