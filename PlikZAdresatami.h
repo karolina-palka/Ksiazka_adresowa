@@ -14,6 +14,8 @@ using namespace std;
 class PlikZAdresatami
 {
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
+    //nazwaTymczasowegoPlikuZAdresatami;
 
     int idOstatniegoAdresata;
 
@@ -22,9 +24,14 @@ class PlikZAdresatami
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     bool czyPlikJestPusty(fstream &plikTekstowy);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    int pobierzZPlikuIdOstatniegoAdresata();
+    void przepiszDoPlikuTymczasowegoAdresatowOproczUsuwanego( fstream &plikTekstowy, fstream &tymczasowyPlikTekstowy, int idAdresata);
 
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami): NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)
+    PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami): NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami),
+    NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami)
     {
         idOstatniegoAdresata = 0;
     };
@@ -32,6 +39,9 @@ public:
     void wyswietlWszystkichAdresatow();
     void dopiszAdresataDoPliku(Adresat adresat);
     int pobierzIdOstatniegoAdresata();
+    void usunDaneAdresataZPliku(int idAdresata);
+    void usunWybranaLinieWPliku(fstream &odczytywanyPlikTekstowy, int numerUsuwanejLinii);
+    int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata);
 
 };
 
