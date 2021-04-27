@@ -28,6 +28,9 @@ class PlikZAdresatami
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
     int pobierzZPlikuIdOstatniegoAdresata();
     void przepiszDoPlikuTymczasowegoAdresatowOproczUsuwanego( fstream &plikTekstowy, fstream &tymczasowyPlikTekstowy, int idAdresata);
+    void przepiszEdytowanegoAdresataZPozostalymiDoPlikuTymczasowego(fstream &plikTekstowy, fstream &tymczasowyPlikTekstowy, Adresat adresat);
+//    void zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+//    void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami): NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami),
@@ -42,6 +45,7 @@ public:
     void usunDaneAdresataZPliku(int idAdresata);
     void usunWybranaLinieWPliku(fstream &odczytywanyPlikTekstowy, int numerUsuwanejLinii);
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 };
 
