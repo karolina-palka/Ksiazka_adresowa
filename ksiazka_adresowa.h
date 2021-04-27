@@ -39,5 +39,7 @@ public:
     void usunAdresata();
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 #endif // KSIAZKA_ADRESOWA_H_INCLUDED
