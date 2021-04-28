@@ -100,7 +100,12 @@ void PlikZUzytkownikami:: zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik
         for (int i=0; i<uzytkownicy.size(); i++)
         {
             liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownicy[i]);
-            plikTekstowy << liniaZDanymiUzytkownika << endl;
+            if (i==0)
+            {
+                plikTekstowy << liniaZDanymiUzytkownika;
+            }
+            else
+                plikTekstowy << endl << liniaZDanymiUzytkownika;
         }
         liniaZDanymiUzytkownika = "";
     }
