@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "ksiazka_adresowa.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy-1.txt", "ksiazka_adresowa-1.txt");
     char wybor;
     while(true)
     {
